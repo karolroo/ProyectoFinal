@@ -60,6 +60,7 @@ public abstract class User implements UtilUser {
     public void registrarUsuario() {
         System.out.println("Ingrese su ID");
         int idUSer = sc.nextInt();
+         sc.skip("\n");
 
         System.out.println("Registre nombre");
         String name = sc.next();
@@ -78,6 +79,7 @@ public abstract class User implements UtilUser {
     public void loginUsuario() {
         System.out.println("Ingrese su ID");
         int idUser= sc.nextInt();
+         sc.skip("\n");
 
         System.out.println("Ingrese nombre");
         String name=sc.next();
