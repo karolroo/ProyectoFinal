@@ -5,7 +5,7 @@ import java.util.Date;
 public class CitaModelo extends PacienteModelo{
     private int idCita;
     private Date fechaCita;
-    private String descripcionConsulta;
+    private String descripcionCita;
 
     public CitaModelo(){
 
