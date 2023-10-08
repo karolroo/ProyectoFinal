@@ -109,6 +109,11 @@ System.out.println("ID" + idUSer + "\n" +
 
     @Override
     public void eliminarCita() {
+        //ELiminar una cita
+        System.out.println("Indique el id de la cita que desea eliminar: ");
+        int idCita = sc.nextInt();
+        CitaDAO.eliminarCitaDB(idCita);
+
 
     }
 
