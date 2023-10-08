@@ -119,6 +119,18 @@ System.out.println("ID" + idUSer + "\n" +
 
     @Override
     public void reprogramarCita() {
+//Actualizacion de citas (llamado desde la carpeta dao)
+         System.out.println("Indique la fecha a actualizar: ");
+        String fechaCita=sc.nextLine();
+        System.out.println("Indique el id de la cita a actualizar");
+        int idCita=sc.nextInt();
+
+        CitaModelo actualizacion = new CitaModelo();
+        actualizacion.setfechaCita(fechaCita);
+        actualizacion.setIdCita(idCita);
+
+        CitaDAO.actualizarCitaDB(actualizacion);
+
 
     }
 }
