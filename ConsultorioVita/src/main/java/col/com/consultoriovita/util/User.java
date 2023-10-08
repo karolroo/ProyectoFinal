@@ -59,7 +59,7 @@ public abstract class User implements UtilUser {
     @Override
     public void registrarUsuario() {
         System.out.println("Ingrese su ID");
-        int id = sc.nextInt();
+        int idUSer = sc.nextInt();
 
         System.out.println("Registre nombre");
         String name = sc.next();
@@ -77,7 +77,7 @@ public abstract class User implements UtilUser {
     @Override
     public void loginUsuario() {
         System.out.println("Ingrese su ID");
-        int id= sc.nextInt();
+        int idUser= sc.nextInt();
 
         System.out.println("Ingrese nombre");
         String name=sc.next();
