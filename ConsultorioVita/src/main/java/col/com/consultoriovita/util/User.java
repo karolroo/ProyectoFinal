@@ -91,7 +91,7 @@ public abstract class User implements UtilUser {
     @Override
     public void consultarCita() {
 
-        /para que se muestre los dato
+//para que se muestre los dato
 System.out.println("ID" + idUSer + "\n" +
                           "Nombre" + name + "\n" +
                           "Apellido" + lastName + "\n" +
