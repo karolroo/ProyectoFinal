@@ -59,7 +59,8 @@ public abstract class User implements UtilUser {
     @Override
     public void registrarUsuario() {
         System.out.println("Ingrese su ID");
-        int id = sc.nextInt();
+        int idUSer = sc.nextInt();
+        sc.skip("\n");
 
         System.out.println("Registre nombre");
         String name = sc.next();
@@ -77,7 +78,8 @@ public abstract class User implements UtilUser {
     @Override
     public void loginUsuario() {
         System.out.println("Ingrese su ID");
-        int id= sc.nextInt();
+        int idUser= sc.nextInt();
+        sc.skip("\n");
 
         System.out.println("Ingrese nombre");
         String name=sc.next();
@@ -91,20 +93,14 @@ public abstract class User implements UtilUser {
     @Override
     public void consultarCita() {
 
-    }
-
-    @Override
-    public void progrmarCita() {
-
-    }
-
-    @Override
-    public void eliminarCita() {
+//para que se muestre los dato
+        System.out.println("ID" + idUSer + "\n" +
+                "Nombre" + name + "\n" +
+                "Apellido" + lastName + "\n" +
+                "Email" + email + "\n" +
+                "Contraseña" + password;
 
     }
 
-    @Override
-    public void reprogramarCita() {
 
-    }
 }
