@@ -10,14 +10,14 @@ public abstract class User implements UtilUser {
     protected String name;
     protected String lastName;
     protected String email;
-    protected int password;
+    protected String password;
 
 
     public User() {
 
     }
 
-    public User(int idUSer, String name, String lastname, String email, int password) {
+    public User(int idUSer, String name, String lastname, String email, String password) {
         this.idUSer = idUSer;
         this.name = name;
         this.lastName = lastname;
@@ -58,31 +58,36 @@ public abstract class User implements UtilUser {
         this.email = email;
     }
 
-    public int getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(int password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
     @Override
-    public void registrarUsuario() {
+    public void registrarUsuario(Paciente paciente) {
         System.out.println("Ingrese su documento de identidad");
         int docPaciente = sc.nextInt();
         sc.skip("\n");
 
         System.out.println("Registre nombre");
-        String name = sc.next();
+        String name = sc.nextLine();
 
         System.out.println("Registre apellido");
         String lastName=sc.nextLine();
 
         System.out.println("Registre email");
-        String email = sc.next();
+        String email = sc.nextLine();
 
         System.out.println("Cree contraseña");
-        int password = sc.nextInt();
+        String password = sc.nextLine();
+    }
+
+    @Override
+    public void registrarUsuario() {
+
     }
 
     @Override

@@ -11,7 +11,7 @@ public class Paciente extends User {
     }
 
 
-    public Paciente(int idUSer, String name, String lastname, String email, int password, int docPaciente, String genero, String motivoConsulta, String direccion) {
+    public Paciente(int idUSer, String name, String lastname, String email, String password, int docPaciente, String genero, String motivoConsulta, String direccion) {
         super(idUSer, name, lastname, email, password);
         this.docPaciente = docPaciente;
         this.genero = genero;
