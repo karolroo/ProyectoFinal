@@ -3,20 +3,20 @@ package col.com.consultoriovita.modelo;
 import java.util.Date;
 import java.util.Scanner;
 
-public class CitaModelo extends PacienteModelo {
+public class Cita {
     Scanner sc=new Scanner(System.in);
     private int idCita;
     private Date fechaCita;
-    private String descripcionConsulta;
+    private String horaConsulta;
 
-    public CitaModelo() {
+    public Cita() {
 
     }
 
-    public CitaModelo(int idCita, Date fechaCita, String descripcionConsulta) {
+    public Cita(int idCita, Date fechaCita, String descripcionConsulta) {
         this.idCita = idCita;
         this.fechaCita = fechaCita;
-        this.descripcionConsulta = descripcionConsulta;
+        this.horaConsulta = descripcionConsulta;
     }
 
     public int getIdCita() {
@@ -35,15 +35,15 @@ public class CitaModelo extends PacienteModelo {
         this.fechaCita = fechaCita;
     }
 
-    public String getDescripcionConsulta() {
-        return descripcionConsulta;
+    public String getHoraConsulta() {
+        return horaConsulta;
     }
 
-    public void setDescripcionConsulta(String descripcionConsulta) {
-        this.descripcionConsulta = descripcionConsulta;
+    public void setHoraConsulta(String horaConsulta) {
+        this.horaConsulta = horaConsulta;
     }
 
-    public void progrmarCita() {
+    public void programarCita() {
 
     }
 
@@ -52,7 +52,7 @@ public class CitaModelo extends PacienteModelo {
         //ELiminar una cita
         System.out.println("Indique el id de la cita que desea eliminar: ");
         int idCita = sc.nextInt();
-        CitaDAO.eliminarCitaDB(idCita);
+        CitaDao.eliminarCitaDB(idCita);
 
 
     }
@@ -65,11 +65,17 @@ public class CitaModelo extends PacienteModelo {
         System.out.println("Indique el id de la cita a actualizar");
         int idCita=sc.nextInt();
 
-        CitaModelo actualizacion = new CitaModelo();
+        Cita actualizacion = new Cita();
         actualizacion.setfechaCita(fechaCita);
         actualizacion.setIdCita(idCita);
 
         CitaDAO.actualizarCitaDB(actualizacion);
+
+
+    }
+    public void consultarCita(Paciente paciente) {
+
+//para que se muestre los dato
 
 
     }

@@ -1,9 +1,9 @@
 package col.com.consultoriovita.service;
 
-import col.com.consultoriovita.modelo.DoctorModelo;
+import col.com.consultoriovita.modelo.Doctor;
 
 public class DoctorService {
-DoctorModelo dm= new DoctorModelo();
+Doctor dm= new Doctor();
 
 
 }

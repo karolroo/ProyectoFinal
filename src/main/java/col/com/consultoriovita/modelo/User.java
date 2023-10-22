@@ -1,4 +1,6 @@
-package col.com.consultoriovita.util;
+package col.com.consultoriovita.modelo;
+
+import col.com.consultoriovita.util.UtilUser;
 
 import java.util.Scanner;
 
@@ -40,6 +42,14 @@ public abstract class User implements UtilUser {
         this.name = name;
     }
 
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -58,8 +68,8 @@ public abstract class User implements UtilUser {
 
     @Override
     public void registrarUsuario() {
-        System.out.println("Ingrese su ID");
-        int idUSer = sc.nextInt();
+        System.out.println("Ingrese su documento de identidad");
+        int docPaciente = sc.nextInt();
         sc.skip("\n");
 
         System.out.println("Registre nombre");
@@ -90,17 +100,22 @@ public abstract class User implements UtilUser {
         System.out.println("Ingrese contraseña");
         int password=sc.nextInt();
     }
-    @Override
-    public void consultarCita() {
 
-//para que se muestre los dato
-        System.out.println("ID" + idUSer + "\n" +
-                "Nombre" + name + "\n" +
-                "Apellido" + lastName + "\n" +
-                "Email" + email + "\n" +
-                "Contraseña" + password;
+    @Override
+    public void actualizarUsuario() {
 
     }
 
+    @Override
+    public void eliminarUsuario() {
 
+    }
+
+    @Override
+    public void verUsuario() {
+        System.out.println("ID" + idUSer+ "\n" +
+                "Nombre" + name + "\n" +
+                "Apellido" + lastName+ "\n" +
+                "Email" + email + "\n");
+    }
 }

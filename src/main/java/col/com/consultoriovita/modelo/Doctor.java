@@ -1,16 +1,14 @@
 package col.com.consultoriovita.modelo;
 
-import col.com.consultoriovita.util.User;
-
-public class DoctorModelo extends User {
+public class Doctor extends User {
 
     private int idMedico;
     private String especialidad;
 
-    public DoctorModelo() {
+    public Doctor() {
     }
 
-    public DoctorModelo(int idUSer, String name, String lastName, int age, String email, int password, int idMedico, String especialidad) {
+    public Doctor(int idUSer, String name, String lastName, int age, String email, int password, int idMedico, String especialidad) {
         super(idUSer, name, lastName, email, password);
         this.idMedico = idMedico;
         this.especialidad = especialidad;
@@ -32,21 +30,6 @@ public class DoctorModelo extends User {
         this.especialidad = especialidad;
     }
 
-
-    @Override
-    public void registrarUsuario() {
-
-    }
-
-    @Override
-    public void actualizarUsuario() {
-
-    }
-
-    @Override
-    public void loginUsuario() {
-
-    }
 
     public void registrarCitaDisponibles(){
 
